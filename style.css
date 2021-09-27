@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+#container {
+    width: 100%;
+    height: 100rem;
+    background-color: #525859;
+    padding-top: 4rem;
+}
+
+#CVContainer {
+    width: 80%;
+    height: 92rem;
+    margin-left: 10%;
+    padding-top: 2rem;
+    background-color: antiquewhite;
+    border-radius: 20px;
+}
+
+#Entry {
+    width: 100%;
+    height: 5rem;
+}
+
+#Entry h1 {
+    padding: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    color: #16a641;
+}
+
+#photo_citation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#photo_citation img, #photo_citation p {
+    width: 33%;
+}
+
+#photo_citation img {
+    border-radius: 300px;
+}
+
+#photo_citation p {
+    margin-left: 5%;
+    font-size: 3rem;
+    font-style: italic;
+}
