@@ -6,16 +6,22 @@
     font-family: 'Roboto', sans-serif;
 }
 
+header {
+    width: 80%;
+    margin-left: 10%;
+    height: 55rem;
+}
+
 #container {
     width: 100%;
-    height: 100rem;
+    height: 300rem;
     background-color: #525859;
     padding-top: 4rem;
 }
 
 #CVContainer {
     width: 80%;
-    height: 92rem;
+    height: 292rem;
     margin-left: 10%;
     padding-top: 2rem;
     background-color: antiquewhite;
@@ -51,6 +57,120 @@
 
 #photo_citation p {
     margin-left: 5%;
+}
+
+a {
     font-size: 3rem;
+    text-decoration: none;
+    color: black;
     font-style: italic;
+}
+
+main {
+    width: 90%;
+    height: 130rem;
+    margin-left: 5%;
+    background-color: white;
+    border: 1px solid #16a641;
+    border-radius: 15px;
+    box-shadow: inset 0 0 17px -5px rgba(22,166,65,0.65);
+}
+
+section dl {
+    padding: 2rem;
+    font-size: 2rem;
+    text-align: justify;
+}
+
+dt {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #16a641;
+}
+
+dd {
+    padding-top: 1rem;
+    text-indent: 3rem;
+}
+
+figure {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 8rem;
+}
+
+figure img {
+    width: 50%;
+    height: 20%;
+}
+
+figcaption {
+    width: 50%;
+    font-size: 2rem;
+    text-align: center;
+    color: #16a641;
+    background-color: black;
+}
+
+aside {
+    display: inline-block;
+    width: 40%;
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-size: 2rem;
+    font-style: italic;
+    color: #29627e;
+}
+
+#list {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 4rem;
+}
+
+#list ul {
+    font-size: 3rem;
+}
+
+table {
+    width: 30%;
+    height: 10rem;
+    margin-left: 10%;
+    margin-top: 10rem;
+}
+
+table, td, th {
+    border: 1px solid #333;
+    font-size: 2rem;
+}
+
+td {
+    text-align: center;
+}
+
+thead {
+    background-color: #333;
+    color: #fff;
+    font-size: 2rem;
+}
+
+tbody tr:last-child {
+    color: #16a641;
+}
+
+footer {
+    width: 100%;
+    height: 50rem;
+    margin-top: 10rem;
+    font-size: 3rem;
+}
+
+form {
+    width: 90%;
+    margin-left: 5%;
+    font-size: 4rem;
+    padding: 4rem;
+
 }
