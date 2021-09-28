@@ -192,4 +192,26 @@ legend {
     #photo_citation {
         flex-direction: column;
     }
+
+    #photo_citation p {
+        margin-top: 4rem;
+    }
+
+    a {
+        font-size: 2rem;
+    }
+
+    table {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    form {
+        width: 100%;
+        margin-left: 0;
+        font-size: 2rem;
+        padding: 1rem;
+    }
 }
