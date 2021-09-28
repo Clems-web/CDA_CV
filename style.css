@@ -14,14 +14,14 @@ header {
 
 #container {
     width: 100%;
-    height: 300rem;
+    height: 250rem;
     background-color: #525859;
     padding-top: 4rem;
 }
 
 #CVContainer {
     width: 80%;
-    height: 292rem;
+    height: 242rem;
     margin-left: 10%;
     padding-top: 2rem;
     background-color: antiquewhite;
@@ -173,4 +173,23 @@ form {
     font-size: 4rem;
     padding: 4rem;
 
+}
+
+button {
+    display: block;
+}
+
+input, button, textarea {
+    margin: 1rem;
+}
+
+legend {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 850px) {
+
+    #photo_citation {
+        flex-direction: column;
+    }
 }
