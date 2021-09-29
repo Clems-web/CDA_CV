@@ -14,14 +14,14 @@ header {
 
 #container {
     width: 100%;
-    height: 250rem;
+    height: 256rem;
     background-color: #525859;
     padding-top: 4rem;
 }
 
 #CVContainer {
     width: 80%;
-    height: 242rem;
+    height: 248rem;
     margin-left: 10%;
     padding-top: 2rem;
     background-color: antiquewhite;
@@ -74,6 +74,16 @@ main {
     border: 1px solid #16a641;
     border-radius: 15px;
     box-shadow: inset 0 0 17px -5px rgba(22,166,65,0.65);
+}
+
+h2, h3 {
+    margin-left: 5%;
+    margin-top: 4rem;
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
 }
 
 section dl {
