@@ -37,7 +37,7 @@ header {
     padding: 2rem;
     font-size: 3rem;
     text-align: center;
-    color: #16a641;
+    /*color: #16a641;*/
 }
 
 #photo_citation {
@@ -101,6 +101,27 @@ dt {
 dd {
     padding-top: 1rem;
     text-indent: 3rem;
+}
+
+dl dt, dl i {
+    display: inline-block;
+}
+
+i {
+    margin-left: 1rem;
+    font-size: 2rem;
+}
+
+.invisible {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+span {
+    font-size: 2rem;
 }
 
 figure {
