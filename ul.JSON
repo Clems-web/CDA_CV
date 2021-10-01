@@ -1,10 +1,10 @@
 {
   "ul": [
     {
-      "li1": "Meticulous",
-      "li2": "Professional",
-      "li3": "rich"
+      "li" : ["Meticulous", "Professional", "Rich"]
+
     }
   ]
-
 }
+
+

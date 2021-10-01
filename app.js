@@ -128,6 +128,32 @@ image.addEventListener('mouseover', function () {
 
 });
 
+let divList = document.getElementById("list");
+
+const xhr = new XMLHttpRequest();
+xhr.open("GET", "./ul.JSON");
+
+// Exploit JSON and display them in HTML format
+xhr.onload = function(){
+    const result = JSON.parse(xhr.responseText);
+
+    for (let element of result.ul) {
+
+        let createUl = document.createElement('ul');
+        divList.appendChild(createUl);
+
+        for (let li of element.li) {
+            let createLi = document.createElement('li');
+            createLi.innerHTML = li;
+            createUl.appendChild(createLi);
+        }
+    }
+}
+
+// Send request
+xhr.send();
+
+
 
 
 
