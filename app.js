@@ -1,62 +1,48 @@
-let title1 = document.querySelector('h1');
-let title2 = document.querySelector('h2');
-let title3 = document.querySelector('h3');
+//Animation
 
 function titleAnim() {
 
-    setTimeout((function () {title1.style.color = "red"}), 1000);
-    setTimeout((function () {title1.style.color = "orange"}), 2000);
-    setTimeout((function () {title1.style.color = "yellow"}), 3000);
-    setTimeout((function () {title1.style.color = "green"}), 4000);
+    setTimeout((function () {$('h1').css('color', 'red')}), 1000);
+    setTimeout((function () {$('h1').css('color', 'orange')}), 2000);
+    setTimeout((function () {$('h1').css('color', 'yellow')}), 3000);
+    setTimeout((function () {$('h1').css('color', 'green')}), 4000);
 
-    setTimeout((function () {title2.style.fontSize = "1rem"}), 5000);
-    setTimeout((function () {title2.style.fontSize = "2rem"}), 6000);
-    setTimeout((function () {title2.style.fontSize = "3rem"}), 7000);
-    setTimeout((function () {title2.style.fontSize = "4rem"}), 7000);
+    setTimeout((function () {$('h2').css('font-size', '1rem')}), 5000);
+    setTimeout((function () {$('h2').css('font-size', '2rem')}), 6000);
+    setTimeout((function () {$('h2').css('font-size', '3rem')}), 7000);
+    setTimeout((function () {$('h2').css('font-size', '4rem')}), 7000);
 
-    setTimeout((function () {title3.style.fontSize = "1rem"}), 8000);
-    setTimeout((function () {title3.style.fontSize = "2rem"}), 9000);
-    setTimeout((function () {title3.style.fontSize = "3rem"}), 10000);
+    setTimeout((function () {$('h3').css('font-size', '1rem')}), 8000);
+    setTimeout((function () {$('h3').css('font-size', '2rem')}), 9000);
+    setTimeout((function () {$('h3').css('font-size', '3rem')}), 10000);
 
 }
 titleAnim();
 
+// Section show and hide
 
-let iFirst = document.getElementById("first-arrow");
-let iSecond = document.getElementById("second-arrow");
-let iThird = document.getElementById("third-arrow");
+$('#first-arrow').click(function () {
+    $(this).toggleClass("fa-sort-up");
+    $('#ddDegree').toggleClass("visible");
+})
 
+$('#second-arrow').click(function () {
+    $(this).toggleClass("fa-sort-up");
+    $('#ddHobbies').toggleClass("visible");
+})
 
-iFirst.addEventListener('click', change("first-arrow", "ddDegree"));
-iFirst.addEventListener('click', function () {
-    iFirst.classList.toggle("fa-sort-up");
-});
-
-iSecond.addEventListener('click', change("second-arrow", "ddHobbies"));
-iSecond.addEventListener('click', function () {
-    iSecond.classList.toggle("fa-sort-up");
-});
-
-iThird.addEventListener('click', change("third-arrow", "ddExperience"));
-iThird.addEventListener('click', function () {
-    iThird.classList.toggle("fa-sort-up");
-});
+$('#third-arrow').click(function () {
+    $(this).toggleClass("fa-sort-up");
+    $('#ddExperience').toggleClass("visible");
+})
 
 
-function change(elementClicked, elementChanged) {
-    let elementCl = document.getElementById(elementClicked);
-    let elementCh = document.getElementById(elementChanged);
 
-    elementCl.addEventListener('click', function () {
-        elementCh.classList.toggle("visible");
-    });
 
-}
-
-let labels = document.getElementsByTagName('label');
+let labels = $('label');
 
 for (let label of labels) {
-
+    label = $(label);
     let tabLetter = label.innerHTML.split("");
     label.innerHTML = "";
 
@@ -68,7 +54,7 @@ for (let label of labels) {
     label.addEventListener('mouseover',
         function () {
 
-            let letter = label.getElementsByTagName('span');
+            let letter = document.getElementsByTagName('span');
             let interval = (x) => {
                 setTimeout(() => {
                     letter[x].style.color = 'red';
