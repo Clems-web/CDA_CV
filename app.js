@@ -76,11 +76,28 @@ for (let label of labels) {
                     x++;
                     if(x < letter.length) {
                         interval(x);}
-                }, 1000);
+                }, 50);
             }
             interval(0);
         }
-    )
+    );
+
+    label.addEventListener('mouseout',
+        function () {
+
+            let letter = label.getElementsByTagName('span');
+            let interval = (x) => {
+                setTimeout(() => {
+                    letter[x].style.color = 'black';
+                    letter[x].style.fontStyle = 'normal';
+                    x++;
+                    if(x < letter.length) {
+                        interval(x);}
+                }, 50);
+            }
+            interval(0);
+        }
+    );
 }
 
 let image = document.getElementById('imgKermit1');
