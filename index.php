@@ -1,4 +1,10 @@
 <?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/DB.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/Content.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/ContentManager.php';
+
+$exemple = new ContentManager();
+
 ?>
 
 <!DOCTYPE html>
@@ -32,33 +38,39 @@
             <h2>About me</h2>
             <section id="Degrees">
                 <dl id="degreesDl">
-                    <dt id="degreesDt">Degrees</dt><i id="first-arrow" class="fas fa-sort-down"></i>
+
+                    <dt id="degreesDt">
+                        <?= $exemple->getContentDt()[0]->getContent(); ?>
+                    </dt>
+                    <i id="first-arrow" class="fas fa-sort-down"></i>
+
                     <dd id="ddDegree" class="invisible">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci asperiores, cumque
-                        doloribus eaque eligendi exercitationem explicabo incidunt iusto mollitia natus odit
-                        officiis porro repudiandae rerum similique sint tempora. Assumenda.
+                        <?= $exemple->getContentDd()[0]->getContent(); ?>
                     </dd>
                 </dl>
             </section>
 
             <section id="Hobbies">
                 <dl>
-                    <dt>Hobbies</dt><i id="second-arrow" class="fas fa-sort-down"></i>
+                    <dt>
+                        <?= $exemple->getContentDt()[1]->getContent(); ?>
+                    </dt>
+                    <i id="second-arrow" class="fas fa-sort-down"></i>
+
                     <dd id="ddHobbies" class="invisible">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci asperiores, cumque
-                        doloribus eaque eligendi exercitationem explicabo incidunt iusto mollitia natus odit
-                        officiis porro repudiandae rerum similique sint tempora. Assumenda.
+                        <?= $exemple->getContentDd()[1]->getContent(); ?>
                     </dd>
                 </dl>
             </section>
 
             <section id="Experience">
                 <dl>
-                    <dt>Experience</dt><i id="third-arrow" class="fas fa-sort-down"></i>
+                    <dt>
+                        <?= $exemple->getContentDt()[2]->getContent(); ?>
+                    </dt>
+                    <i id="third-arrow" class="fas fa-sort-down"></i>
                     <dd id="ddExperience" class="invisible">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci asperiores, cumque
-                        doloribus eaque eligendi exercitationem explicabo incidunt iusto mollitia natus odit
-                        officiis porro repudiandae rerum similique sint tempora. Assumenda.
+                        <?= $exemple->getContentDd()[2]->getContent(); ?>
                     </dd>
                 </dl>
             </section>

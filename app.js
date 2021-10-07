@@ -148,29 +148,18 @@ image.addEventListener('mouseover', function () {
 let divList = document.getElementById("list");
 
 const xhr = new XMLHttpRequest();
-xhr.open("GET", "./ul.JSON");
+xhr.open("GET", "./function.php");
 
 // Exploit JSON and display them in HTML format
 xhr.onload = function(){
     const result = JSON.parse(xhr.responseText);
+    let createUl = document.createElement('ul');
+    divList.appendChild(createUl);
 
-    for (let element of result.ul) {
-
-        let createUl = document.createElement('ul');
-        divList.appendChild(createUl);
-
-        for (let li of element.li) {
-            let createLi = document.createElement('li');
-            createLi.innerHTML = li;
-            createUl.appendChild(createLi);
-        }
+    for (let element of result) {
+        createUl.innerHTML += `<li>${element.li}</li>`;
     }
 }
 
 // Send request
 xhr.send();
-
-
-
-
-
