@@ -1,5 +1,9 @@
 <?php
+session_start();
+
 require_once $_SERVER['DOCUMENT_ROOT'] . '/DB.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/User.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/UserManager.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/Content.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/ContentManager.php';
 
@@ -123,6 +127,14 @@ $exemple = new ContentManager();
                     <button type="submit">Envoyer</button>
                 </fieldset>
             </form>
+            <?php
+                if (isset($_SESSION['user'])) {
+                    echo '<button class="buttonConnect"><a href="deconnection.php">Se déconnecter</a></button>';
+                }
+                else {
+                    echo '<button class="buttonConnect"><a href="connectionview.php">Se connecter</a></button>';
+                }
+            ?>
         </footer>
     </div>
 </div>

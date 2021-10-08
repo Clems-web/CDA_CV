@@ -14,14 +14,14 @@ header {
 
 #container {
     width: 100%;
-    height: 256rem;
+    height: 260rem;
     background-color: #525859;
     padding-top: 4rem;
 }
 
 #CVContainer {
     width: 80%;
-    height: 248rem;
+    height: 252rem;
     margin-left: 10%;
     padding-top: 2rem;
     background-color: antiquewhite;
@@ -216,6 +216,17 @@ input, button, textarea {
 
 legend {
     font-weight: bold;
+}
+
+.buttonConnect {
+    width: 10%;
+    height: 3rem;
+    margin-left: 7.5%;
+}
+
+.buttonConnect a {
+    font-style: normal;
+    font-size: 2rem;
 }
 
 @media screen and (max-width: 850px) {
