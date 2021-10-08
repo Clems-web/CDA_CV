@@ -60,4 +60,27 @@ class ContentManager {
         }
         return $content;
     }
+
+    public function updateContentDd(string $content, int $id) {
+        $request = DB::getInstance()->prepare("
+            UPDATE dd SET content = :content WHERE id = :id
+            ");
+
+        $request->bindParam(':content', $content);
+        $request->bindParam(':id', $id);
+
+        $request->execute();
+    }
+
+    public function updateContentLi(string $content, int $id) {
+        $request = DB::getInstance()->prepare("
+            UPDATE li SET content = :content WHERE id = :id
+            ");
+
+        $request->bindParam(':content', $content);
+        $request->bindParam(':id', $id);
+
+        $request->execute();
+    }
+
 }
