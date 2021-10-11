@@ -1,3 +1,11 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/DB.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/Content.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/ContentManager.php';
+
+$manager = new ContentManager();
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -33,9 +41,9 @@
             <label for="message"></label>
             <input type="text" name="message" id="message">
             <select name="sectionSelect" id="sectionSelect">
-                <option value="1">li n°1</option>
-                <option value="2">li n°2</option>
-                <option value="3">li n°3</option>
+                <option value="1"><?= $manager->getContentli()[0]->getContent() ?></option>
+                <option value="2"><?= $manager->getContentli()[1]->getContent() ?></option>
+                <option value="3"><?= $manager->getContentli()[2]->getContent() ?></option>
             </select>
             <button type="submit">Modifier</button>
         </form>
